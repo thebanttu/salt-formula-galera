@@ -1,3 +1,4 @@
+{%- set ip = salt['grains.get']('ipv4')[0] -%}
 galera:
   version:
     mysql: 5.6
