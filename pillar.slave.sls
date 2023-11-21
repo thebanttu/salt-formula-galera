@@ -1,7 +1,9 @@
+{%- set ip = salt['grains.get']('ipv4')[0] -%}
 galera:
   slave:
     enabled: true
     name: biko
+    maintenance_password: ''
     bind:
       address: {{ ip }}
       port: 3306
